@@ -1,0 +1,476 @@
+
+/* =======================================================
+   FADE IN ANIMATION
+======================================================= */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =======================================================
+   FLOAT ANIMATION
+======================================================= */
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+
+/* =======================================================
+   GLOW PULSE
+======================================================= */
+
+@keyframes glowPulse {
+
+    0% {
+
+        box-shadow:
+            0 0 0 rgba(124, 58, 237, 0.0);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 40px rgba(124, 58, 237, 0.35);
+
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 rgba(124, 58, 237, 0.0);
+
+    }
+
+}
+
+
+/* =======================================================
+   BORDER SHINE
+======================================================= */
+
+@keyframes borderShine {
+
+    0% {
+
+        background-position: 0% 50%;
+
+    }
+
+    100% {
+
+        background-position: 200% 50%;
+
+    }
+
+}
+
+
+/* =======================================================
+   BACKGROUND GLOW MOVEMENT
+======================================================= */
+
+@keyframes glowMove {
+
+    0% {
+
+        transform: translate(0, 0);
+
+    }
+
+    50% {
+
+        transform: translate(40px, -30px);
+
+    }
+
+    100% {
+
+        transform: translate(0, 0);
+
+    }
+
+}
+
+
+/* =======================================================
+   BUTTON SHINE
+======================================================= */
+
+@keyframes buttonShine {
+
+    from {
+
+        transform: translateX(-120%);
+
+    }
+
+    to {
+
+        transform: translateX(220%);
+
+    }
+
+}
+
+
+/* =======================================================
+   HERO ANIMATIONS
+======================================================= */
+
+.hero-content {
+
+    animation: fadeIn 1s ease forwards;
+
+}
+
+
+.hero-badge {
+
+    animation:
+        fadeIn 0.8s ease forwards,
+        glowPulse 4s infinite;
+
+}
+
+
+.hero-title {
+
+    animation: fadeIn 1s ease forwards;
+
+}
+
+
+.hero-description {
+
+    animation: fadeIn 1.2s ease forwards;
+
+}
+
+
+.hero-buttons {
+
+    animation: fadeIn 1.4s ease forwards;
+
+}
+
+
+/* =======================================================
+   BACKGROUND GLOW EFFECTS
+======================================================= */
+
+.bg-glow {
+
+    animation: glowMove 10s ease-in-out infinite;
+
+}
+
+
+.glow-2 {
+
+    animation-delay: 2s;
+
+}
+
+
+/* =======================================================
+   BUTTON EFFECTS
+======================================================= */
+
+.primary-btn,
+.secondary-btn,
+.analyze-btn {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.primary-btn::before,
+.secondary-btn::before,
+.analyze-btn::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 50%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,0.35),
+            transparent
+        );
+
+}
+
+
+.primary-btn:hover::before,
+.secondary-btn:hover::before,
+.analyze-btn:hover::before {
+
+    animation: buttonShine 1s ease;
+
+}
+
+
+.primary-btn:hover,
+.secondary-btn:hover,
+.analyze-btn:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+/* =======================================================
+   NAV LINKS
+======================================================= */
+
+.nav-link::after {
+
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0%;
+    height: 2px;
+
+    background:
+        linear-gradient(to right,
+            var(--purple),
+            var(--cyan));
+
+    border-radius: 100px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+
+    width: 100%;
+
+}
+
+
+/* =======================================================
+   SOCIAL ICONS
+======================================================= */
+
+.social-link:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    box-shadow:
+        0 0 25px rgba(124, 58, 237, 0.35);
+
+    border-color:
+        rgba(124, 58, 237, 0.4);
+
+}
+
+
+/* =======================================================
+   FEATURE CARDS
+======================================================= */
+
+.feature-card {
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+}
+
+
+.feature-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 0 40px rgba(124, 58, 237, 0.18);
+
+    border-color:
+        rgba(124, 58, 237, 0.25);
+
+}
+
+
+.feature-icon {
+
+    animation: floating 4s ease-in-out infinite;
+
+}
+
+
+/* =======================================================
+   ANALYZER CARD
+======================================================= */
+
+.analyzer-card {
+
+    animation:
+        fadeIn 1s ease forwards,
+        glowPulse 5s infinite;
+
+}
+
+
+.analyzer-card textarea:focus {
+
+    border-color:
+        rgba(124, 58, 237, 0.4);
+
+    box-shadow:
+        0 0 20px rgba(124, 58, 237, 0.15);
+
+}
+
+
+/* =======================================================
+   RESULT CARD
+======================================================= */
+
+.result-card {
+
+    animation: fadeIn 1.2s ease forwards;
+
+}
+
+
+.result-card:hover {
+
+    border-color:
+        rgba(0, 229, 255, 0.2);
+
+    box-shadow:
+        0 0 35px rgba(0, 229, 255, 0.08);
+
+}
+
+
+/* =======================================================
+   CONTACT FORM
+======================================================= */
+
+.contact-form {
+
+    animation: fadeIn 1s ease forwards;
+
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+
+    border-color:
+        rgba(124, 58, 237, 0.35);
+
+    box-shadow:
+        0 0 20px rgba(124, 58, 237, 0.12);
+
+}
+
+
+/* =======================================================
+   FOOTER SOCIALS
+======================================================= */
+
+.footer-socials .social-link:hover {
+
+    transform:
+        translateY(-5px)
+        rotate(5deg);
+
+}
+
+
+/* =======================================================
+   HAMBURGER ANIMATION
+======================================================= */
+
+.hamburger {
+
+    transition: 0.3s ease;
+
+}
+
+
+.hamburger:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* =======================================================
+   SCROLL REVEAL STATES
+======================================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}

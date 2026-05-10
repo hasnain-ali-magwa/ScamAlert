@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ======================================== -->
+    <!-- META TAGS -->
+    <!-- ======================================== -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- ======================================== -->
+    <!-- SEO -->
+    <!-- ======================================== -->
+
+    <title>ScamAlert | AI Scam Detection</title>
+
+    <meta name="title" content="ScamAlert">
+
+    <meta
+        name="description"
+        content="Analyze suspicious messages and phishing links instantly using ScamAlert AI-powered scam detection.">
+
+
+    <!-- ======================================== -->
+    <!-- FAVICON -->
+    <!-- ======================================== -->
+
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+
+
+    <!-- ======================================== -->
+    <!-- FONT AWESOME -->
+    <!-- ======================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ======================================== -->
+    <!-- CSS FILES -->
+    <!-- ======================================== -->
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+</head>
+
+<body>
+
+
+    <!-- ======================================== -->
+    <!-- BACKGROUND EFFECTS -->
+    <!-- ======================================== -->
+
+    <div class="bg-grid"></div>
+
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+
+
+    <!-- ======================================== -->
+    <!-- NAVBAR -->
+    <!-- ======================================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <!-- BRAND -->
+            <a href="#home" class="brand">
+                ScamAlert
+            </a>
+
+
+            <!-- NAVIGATION -->
+            <nav class="nav-menu">
+
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
+
+                <a href="#contact" class="nav-link">
+                    Contact Us
+                </a>
+
+                <a href="https://hasnain-ali.pages.dev/" target="_blank" class="nav-link">
+                    Dev Portfolio
+                </a>
+
+
+                <!-- SOCIAL ICONS -->
+                <div class="nav-socials">
+
+                    <a href="https://github.com/hasnain-ali-magwa" target="_blank" class="social-link">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/hasnain-ali-magwa-908309319" target="_blank" class="social-link">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/hasnain_ali_magwa/" target="_blank" class="social-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- HAMBURGER -->
+            <button class="hamburger">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ======================================== -->
+    <!-- HERO SECTION -->
+    <!-- ======================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container hero-container">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    AI-Powered Scam Detection
+                </span>
+
+
+                <h1 class="hero-title">
+                    Stay Ahead of
+                    <span>Online Scams</span>
+                </h1>
+
+
+                <p class="hero-description">
+                    Analyze suspicious messages and phishing links instantly
+                    using advanced AI-powered scam detection.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a href="#analyzer" class="primary-btn">
+                        Analyze Now
+                    </a>
+
+                    <a href="#features" class="secondary-btn">
+                        Learn More
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================== -->
+    <!-- SMART ANALYZER -->
+    <!-- ======================================== -->
+
+    <section class="analyzer" id="analyzer">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2>
+                    Smart Scam Analyzer
+                </h2>
+
+                <p>
+                    Paste any suspicious message or phishing link.
+                </p>
+
+            </div>
+
+
+            <div class="analyzer-card">
+
+                <div class="textarea-wrapper">
+
+    <textarea
+        id="scamInput"
+        placeholder="Paste suspicious message or phishing link here..."></textarea>
+
+
+    <div class="textarea-footer">
+
+        <span class="typing-status">
+            Ready to analyze
+        </span>
+
+        <span class="char-count">
+            0 Characters
+        </span>
+
+    </div>
+
+</div>
+
+
+                <button class="analyze-btn">
+
+    <span class="btn-text">
+        Analyze Threat
+    </span>
+
+    <span class="btn-loader"></span>
+
+</button>
+
+            </div>
+
+
+            <!-- RESULT -->
+            <div class="result-card">
+
+                <div class="result-top">
+
+                    <span class="risk-badge high-risk">
+                        High Risk
+                    </span>
+
+                    <span class="risk-score">
+                        Scam Probability: 92%
+                    </span>
+
+                </div>
+
+
+                <div class="result-content">
+
+    <div class="detected-url-box"></div>
+
+    <!-- DETECTED ISSUES -->
+
+    <div class="result-section">
+
+        <h3>
+            Detected Issues
+        </h3>
+
+        <ul class="issues-list">
+
+            <li>Suspicious banking keywords</li>
+
+            <li>Urgency pressure tactics</li>
+
+            <li>Phishing URL detected</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- SAFETY TIPS -->
+
+    <div class="result-section">
+
+        <h3>
+            Safety Tips
+        </h3>
+
+        <ul class="tips-list">
+
+            <li>Avoid clicking suspicious links.</li>
+
+            <li>Do not share OTP or banking details.</li>
+
+            <li>Verify through official sources only.</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================== -->
+    <!-- FEATURES -->
+    <!-- ======================================== -->
+
+    <section class="features" id="features">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2>
+                    Features
+                </h2>
+
+                <p>
+                    Powerful tools to protect you from online fraud.
+                </p>
+
+            </div>
+
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <h3>
+                        Scam Detection
+                    </h3>
+
+                    <p>
+                        Detect suspicious scam patterns instantly.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-link"></i>
+                    </div>
+
+                    <h3>
+                        Phishing Check
+                    </h3>
+
+                    <p>
+                        Analyze dangerous phishing links safely.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h3>
+                        Fast Analysis
+                    </h3>
+
+                    <p>
+                        Instant AI-powered threat analysis system.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================== -->
+    <!-- CONTACT -->
+    <!-- ======================================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <h2>
+                    Contact Us
+                </h2>
+
+                <p>
+                    Send your feedback or report suspicious activity.
+                </p>
+
+            </div>
+
+
+            <form class="contact-form">
+
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+
+
+<div class="custom-select">
+
+    <div class="select-selected">
+
+        Select Subject
+
+    </div>
+
+
+    <div class="select-options">
+
+        <div class="select-option">
+            Report Scam
+        </div>
+
+        <div class="select-option">
+            False Detection
+        </div>
+
+        <div class="select-option">
+            Feedback
+        </div>
+
+        <div class="select-option">
+            Bug Report
+        </div>
+
+        <div class="select-option">
+            Business Inquiry
+        </div>
+
+        <div class="select-option">
+            Other
+        </div>
+
+    </div>
+
+</div>
+
+
+<input
+    type="hidden"
+    id="subjectInput"
+    value="">
+
+
+                <textarea placeholder="Your Message" required></textarea>
+
+                <button type="submit" class="primary-btn">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================== -->
+    <!-- FOOTER -->
+    <!-- ======================================== -->
+
+    <footer class="footer">
+
+    <div class="container footer-container">
+
+        <!-- LOGO -->
+
+        <div class="footer-logo">
+            ScamAlert
+        </div>
+
+
+        <!-- DESCRIPTION -->
+
+        <p class="footer-description">
+
+            AI-powered scam and phishing detection platform
+            helping users stay safe from digital fraud,
+            malicious links, phishing attacks,
+            and online scams.
+
+        </p>
+
+
+        <!-- SOCIAL LINKS -->
+
+        <div class="footer-socials">
+
+            <a href="https://github.com/hasnain-ali-magwa" target="_blank" class="social-link">
+
+                <i class="fab fa-github"></i>
+
+            </a>
+
+
+            <a href="https://www.linkedin.com/in/hasnain-ali-magwa-908309319" target="_blank" class="social-link">
+
+                <i class="fab fa-linkedin-in"></i>
+
+            </a>
+
+
+            <a href="https://www.instagram.com/hasnain_ali_magwa/" target="_blank" class="social-link">
+
+                <i class="fab fa-instagram"></i>
+
+            </a>
+
+
+            <a href="https://hasnain-ali.pages.dev/" target="_blank" class="social-link">
+
+                <i class="fas fa-globe"></i>
+
+            </a>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="copyright">
+
+            © 2026 ScamAlert.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+    <!-- ======================================== -->
+    <!-- JS FILES -->
+    <!-- ======================================== -->
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/responsive.js"></script>
+    <script src="assets/js/animations.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+
+/* =======================================================
+   LARGE DEVICES
+======================================================= */
+
+@media screen and (max-width: 1200px) {
+
+    .hero-title {
+        font-size: 4.5rem;
+    }
+
+
+    .features-grid {
+        gap: 24px;
+    }
+
+}
+
+
+/* =======================================================
+   TABLETS
+======================================================= */
+
+@media screen and (max-width: 992px) {
+
+    section {
+        padding: 100px 0;
+    }
+
+
+    .section-header h2 {
+        font-size: 2.5rem;
+    }
+
+
+    .hero-title {
+        font-size: 3.8rem;
+    }
+
+
+    .hero-description {
+        font-size: 1.05rem;
+    }
+
+
+    .features-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .nav-menu {
+
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: 320px;
+        height: 100vh;
+
+        background: rgba(5, 8, 22, 0.95);
+
+        backdrop-filter: blur(18px);
+
+        border-left: 1px solid rgba(255,255,255,0.08);
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 35px;
+
+        transition: 0.4s ease;
+
+        z-index: 999;
+
+    }
+
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+
+    .hamburger {
+        display: block;
+        z-index: 1000;
+    }
+
+
+    .nav-socials {
+
+        margin-top: 15px;
+
+    }
+
+}
+
+
+/* =======================================================
+   MOBILE DEVICES
+======================================================= */
+
+@media screen and (max-width: 768px) {
+
+    section {
+        padding: 90px 0;
+    }
+
+
+    .section-header {
+        margin-bottom: 55px;
+    }
+
+
+    .section-header h2 {
+
+        font-size: 2.1rem;
+
+        line-height: 1.2;
+
+    }
+
+
+    .section-header p {
+
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+        padding-top: 140px;
+        padding-bottom: 90px;
+
+    }
+
+
+    .hero-title {
+
+        font-size: 3rem;
+
+        line-height: 1.15;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+    .primary-btn,
+    .secondary-btn {
+
+        width: 100%;
+
+    }
+
+
+    .features-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .analyzer-card,
+    .result-card,
+    .feature-card,
+    .contact-form {
+
+        border-radius: 24px;
+
+    }
+
+
+    .analyzer-card {
+
+        padding: 24px;
+
+    }
+
+
+    .analyzer-card textarea {
+
+        height: 200px;
+
+        padding: 18px;
+
+    }
+
+
+    .result-card {
+
+        padding: 24px;
+
+    }
+
+
+    .result-top {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .feature-card {
+
+        padding: 28px;
+
+    }
+
+
+    .contact-form {
+
+        padding: 28px;
+
+    }
+
+
+    .footer {
+
+        padding-top: 70px;
+
+    }
+
+}
+
+
+/* =======================================================
+   SMALL MOBILE DEVICES
+======================================================= */
+
+@media screen and (max-width: 576px) {
+
+    .container {
+
+        padding-inline: 16px;
+
+    }
+
+
+    .navbar {
+
+        padding: 16px 0;
+
+    }
+
+
+    .brand {
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .hero-title {
+
+        font-size: 2.4rem;
+
+    }
+
+
+    .hero-badge {
+
+        font-size: 0.85rem;
+
+        padding: 10px 16px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 0.95rem;
+
+    }
+
+
+    .section-header h2 {
+
+        font-size: 1.9rem;
+
+    }
+
+
+    .analyzer-card textarea {
+
+        font-size: 0.95rem;
+
+    }
+
+
+    .analyze-btn {
+
+        padding: 16px;
+
+    }
+
+
+    .feature-card h3 {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    .feature-card p,
+    .result-content li,
+    .footer p,
+    .copyright {
+
+        font-size: 0.95rem;
+
+    }
+
+
+    .social-link {
+
+        width: 40px;
+        height: 40px;
+
+    }
+
+
+    .nav-menu {
+
+        width: 100%;
+
+    }
+
+}
+
+
+/* =======================================================
+   EXTRA SMALL DEVICES
+======================================================= */
+
+@media screen and (max-width: 400px) {
+
+    .hero-title {
+
+        font-size: 2rem;
+
+    }
+
+
+    .section-header h2 {
+
+        font-size: 1.7rem;
+
+    }
+
+
+    .hero-description,
+    .section-header p {
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .primary-btn,
+    .secondary-btn {
+
+        padding: 14px 20px;
+
+        font-size: 0.95rem;
+
+    }
+
+
+    .feature-card,
+    .contact-form,
+    .result-card,
+    .analyzer-card {
+
+        padding: 20px;
+
+    }
+
+}
+
