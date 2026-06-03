@@ -1,14 +1,3 @@
-# backend/app.py
-
-
-# ==========================================================
-# SCAMALERT FLASK BACKEND
-# ==========================================================
-
-
-# ==========================================================
-# IMPORTS
-# ==========================================================
 
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
@@ -19,18 +8,7 @@ import re
 from google import genai
 import os
 
-
-
-# ==========================================================
-# LOAD ENVIRONMENT VARIABLES
-# ==========================================================
-
 load_dotenv()
-
-
-# ==========================================================
-# FLASK APP
-# ==========================================================
 
 app = Flask(__name__)
 @app.route('/')
@@ -40,28 +18,15 @@ def home():
 CORS(app)
 
 
-# ==========================================================
-# ENV VARIABLES
-# ==========================================================
-
 DISCORD_WEBHOOK_URL = os.getenv('DISCORD_WEBHOOK_URL')
 
 VIRUSTOTAL_API_KEY = os.getenv('VIRUSTOTAL_API_KEY')
 
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 
-
-# ==========================================================
-# GEMINI CONFIG
-# ==========================================================
 client = genai.Client(
     api_key=GEMINI_API_KEY
 )
-
-
-# ==========================================================
-# SCAM KEYWORDS
-# ==========================================================
 
 SCAM_KEYWORDS = [
 
@@ -77,10 +42,6 @@ SCAM_KEYWORDS = [
 ]
 
 
-# ==========================================================
-# URGENCY WORDS
-# ==========================================================
-
 URGENCY_WORDS = [
 
     'urgent',
@@ -95,10 +56,6 @@ URGENCY_WORDS = [
 ]
 
 
-# ==========================================================
-# SAFE WORDS
-# ==========================================================
-
 SAFE_WORDS = [
 
     'do not share otp',
@@ -110,10 +67,6 @@ SAFE_WORDS = [
 
 ]
 
-
-# ==========================================================
-# PHISHING PATTERNS
-# ==========================================================
 
 PHISHING_PATTERNS = [
 
@@ -130,9 +83,6 @@ PHISHING_PATTERNS = [
 
 ]
 
-# ==========================================================
-# VIRUSTOTAL URL CHECK
-# ==========================================================
 
 def check_url_virustotal(url):
 
@@ -187,10 +137,6 @@ def check_url_virustotal(url):
 
         return None
 
-
-# ==========================================================
-# GEMINI AI ANALYSIS
-# ==========================================================
 def analyze_with_gemini(message):
 
     try:
@@ -221,10 +167,6 @@ def analyze_with_gemini(message):
     except Exception as error:
 
         return f'AI analysis unavailable: {error}'
-
-# ==========================================================
-# ANALYZE ROUTE
-# ==========================================================
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
@@ -261,11 +203,6 @@ def analyze():
 
         detected_issues = []
 
-
-        # ==================================================
-        # BASIC KEYWORD CHECK
-        # ==================================================
-
         for keyword in SCAM_KEYWORDS:
 
             if keyword in user_input:
@@ -276,10 +213,6 @@ def analyze():
                     f'Sensitive keyword detected: {keyword}'
                 )
 
-
-        # ==================================================
-        # URGENCY DETECTION
-        # ==================================================
 
         for word in URGENCY_WORDS:
 
@@ -292,10 +225,6 @@ def analyze():
                 )
 
 
-        # ==================================================
-        # PHISHING PATTERN CHECK
-        # ==================================================
-
         for pattern in PHISHING_PATTERNS:
 
             if pattern in user_input:
@@ -306,10 +235,6 @@ def analyze():
                     f'Suspicious phishing pattern: {pattern}'
                 )
 
-
-        # ==================================================
-        # URL CHECK
-        # ==================================================
 
         url_pattern = r'https?:\/\/[^\s]+'
 
@@ -323,10 +248,6 @@ def analyze():
             )
 
 
-        # ==================================================
-        # SAFE MESSAGE CHECK
-        # ==================================================
-
         for safe_word in SAFE_WORDS:
 
             if safe_word in user_input:
@@ -338,10 +259,6 @@ def analyze():
                 )
 
 
-        # ==================================================
-        # LIMIT SCORE
-        # ==================================================
-
         if risk_score < 0:
             risk_score = 0
 
@@ -349,10 +266,6 @@ def analyze():
         if risk_score > 100:
             risk_score = 100
 
-
-        # ==================================================
-        # RISK LEVEL
-        # ==================================================
 
         risk_level = 'Low Risk'
 
@@ -364,20 +277,12 @@ def analyze():
             risk_level = 'Medium Risk'
 
 
-        # ==================================================
-        # DEFAULT SAFE RESPONSE
-        # ==================================================
-
         if not detected_issues:
 
             detected_issues.append(
                 'No major scam indicators detected.'
             )
 
-
-        # ==================================================
-        # SAFETY TIPS
-        # ==================================================
 
         safety_tips = []
 
@@ -406,10 +311,6 @@ def analyze():
                 'Stay cautious while sharing information.'
             ]
 
-
-        # ==================================================
-        # URL EXTRACTION
-        # ==================================================
 
         urls = re.findall(
             r'https?:\\/\\/[^\\s]+',
@@ -450,11 +351,6 @@ def analyze():
                     )
 
 
-        # ==================================================
-        # GEMINI AI ANALYSIS
-        # ==================================================
-        # ==================================================
-
         return jsonify({
 
             'success': True,
@@ -475,10 +371,6 @@ def analyze():
 
         }), 500
 
-
-# ==========================================================
-# CONTACT ROUTE
-# ==========================================================
 
 @app.route('/contact', methods=['POST'])
 def contact():
@@ -516,10 +408,6 @@ def contact():
 
             }), 400
 
-
-        # ==================================================
-        # DISCORD EMBED
-        # ==================================================
 
         embed = {
 
@@ -565,10 +453,6 @@ def contact():
         }
 
 
-        # ==================================================
-        # SEND TO DISCORD
-        # ==================================================
-
         response = requests.post(
             DISCORD_WEBHOOK_URL,
             json=payload
@@ -602,10 +486,6 @@ def contact():
 
         }), 500
 
-
-# ==========================================================
-# START SERVER
-# ==========================================================
 
 if __name__ == '__main__':
 

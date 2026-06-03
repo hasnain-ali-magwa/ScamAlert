@@ -1,23 +1,10 @@
 
-/* ======================================================
-   SCAMALERT RESPONSIVE JAVASCRIPT
-====================================================== */
-
-
-/* ======================================================
-   ELEMENTS
-====================================================== */
-
 const hamburger = document.querySelector('.hamburger');
 
 const navMenu = document.querySelector('.nav-menu');
 
 const navLinksResponsive = document.querySelectorAll('.nav-link');
 
-
-/* ======================================================
-   TOGGLE MOBILE MENU
-====================================================== */
 
 hamburger.addEventListener('click', () => {
 
@@ -27,10 +14,6 @@ hamburger.addEventListener('click', () => {
 
 });
 
-
-/* ======================================================
-   CLOSE MENU ON LINK CLICK
-====================================================== */
 
 navLinksResponsive.forEach(link => {
 
@@ -43,11 +26,6 @@ navLinksResponsive.forEach(link => {
     });
 
 });
-
-
-/* ======================================================
-   CLOSE MENU WHEN CLICK OUTSIDE
-====================================================== */
 
 window.addEventListener('click', (event) => {
 
@@ -71,10 +49,6 @@ window.addEventListener('click', (event) => {
 });
 
 
-/* ======================================================
-   RESET MENU ON RESIZE
-====================================================== */
-
 window.addEventListener('resize', () => {
 
     if (window.innerWidth > 992) {
@@ -87,10 +61,6 @@ window.addEventListener('resize', () => {
 
 });
 
-
-/* ======================================================
-   PREVENT BODY SCROLL WHEN MENU OPEN
-====================================================== */
 
 hamburger.addEventListener('click', () => {
 
@@ -109,10 +79,6 @@ hamburger.addEventListener('click', () => {
 });
 
 
-/* ======================================================
-   RESTORE SCROLL AFTER LINK CLICK
-====================================================== */
-
 navLinksResponsive.forEach(link => {
 
     link.addEventListener('click', () => {
@@ -123,10 +89,6 @@ navLinksResponsive.forEach(link => {
 
 });
 
-
-/* ======================================================
-   RESTORE SCROLL AFTER OUTSIDE CLICK
-====================================================== */
 
 window.addEventListener('click', (event) => {
 

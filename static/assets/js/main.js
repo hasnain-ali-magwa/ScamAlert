@@ -1,11 +1,3 @@
-/* ======================================================
-   SCAMALERT MAIN JAVASCRIPT
-====================================================== */
-
-
-/* ======================================================
-   ELEMENTS
-====================================================== */
 
 const analyzeButton = document.querySelector('.analyze-btn');
 
@@ -26,14 +18,8 @@ const typingStatus = document.querySelector('.typing-status');
 
 const charCount = document.querySelector('.char-count');
 
-/* ======================================================
-   HIDE RESULT INITIALLY
-====================================================== */
 
 resultCard.style.display = 'none';
-/* ======================================================
-   CHARACTER COUNTER
-====================================================== */
 
 scamInput.addEventListener('input', () => {
 
@@ -57,21 +43,12 @@ scamInput.addEventListener('input', () => {
 
     }
 
-
-    /* ==========================================
-       AUTO RESIZE
-    ========================================== */
-
     scamInput.style.height = '220px';
 
     scamInput.style.height =
         scamInput.scrollHeight + 'px';
 
 });
-
-/* ======================================================
-   ANALYZE MESSAGE
-====================================================== */
 
 analyzeButton.addEventListener('click', async () => {
 
@@ -85,11 +62,6 @@ analyzeButton.addEventListener('click', async () => {
         return;
 
     }
-
-
-    /* ==========================================
-       LOADING STATE
-    ========================================== */
 
     analyzeButton.disabled = true;
 
@@ -127,17 +99,8 @@ analyzeButton.classList.add('loading');
 
         }
 
-
-        /* ==========================================
-           SHOW RESULT
-        ========================================== */
-
         resultCard.style.display = 'block';
 
-
-        /* ==========================================
-           RISK LEVEL
-        ========================================== */
 
         riskBadge.textContent = data.risk_level;
 
@@ -163,23 +126,11 @@ analyzeButton.classList.add('loading');
         }
 
 
-        /* ==========================================
-           RISK SCORE
-        ========================================== */
-
         riskScore.textContent =
             `Scam Probability: ${data.risk_score}%`;
 
 
-        /* ==========================================
-           DETECTED ISSUES
-        ========================================== */
-
         resultList.innerHTML = '';
-
-        /* ==========================================
-   DETECT URL
-========================================== */
 
 const urlRegex =
     /(https?:\/\/[^\s]+)/g;
@@ -221,11 +172,6 @@ else {
 
         });
 
-
-        /* ==========================================
-           SAFETY TIPS
-        ========================================== */
-
         if (data.safety_tips) {
 
             const tipsTitle = document.createElement('h3');
@@ -249,10 +195,6 @@ else {
 
         }
 
-
-        /* ==========================================
-           SCROLL TO RESULT
-        ========================================== */
 
         resultCard.scrollIntoView({
 
@@ -280,11 +222,6 @@ analyzeButton.classList.remove('loading');
     }
 
 });
-
-
-/* ======================================================
-   CONTACT FORM SUBMIT
-====================================================== */
 
 contactForm.addEventListener('submit', async (event) => {
 
@@ -369,10 +306,6 @@ contactForm.addEventListener('submit', async (event) => {
 });
 
 
-/* ======================================================
-   ACTIVE NAV LINK
-====================================================== */
-
 const sections = document.querySelectorAll('section');
 
 const navLinks = document.querySelectorAll('.nav-link');
@@ -416,9 +349,6 @@ window.addEventListener('scroll', () => {
 
 });
 
-/* ======================================================
-   CUSTOM SELECT
-====================================================== */
 
 const customSelect =
     document.querySelector('.custom-select');

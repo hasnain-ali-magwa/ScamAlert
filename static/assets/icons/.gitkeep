@@ -1,22 +1,14 @@
-# index.html
 
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <!-- ======================================== -->
-    <!-- META TAGS -->
-    <!-- ======================================== -->
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-    <!-- ======================================== -->
-    <!-- SEO -->
-    <!-- ======================================== -->
 
     <title>ScamAlert | AI Scam Detection</title>
 
@@ -26,26 +18,13 @@
         name="description"
         content="Analyze suspicious messages and phishing links instantly using ScamAlert AI-powered scam detection.">
 
-
-    <!-- ======================================== -->
-    <!-- FAVICON -->
-    <!-- ======================================== -->
-
     <link rel="icon" type="image/png" href="assets/icons/favicon.png">
 
-
-    <!-- ======================================== -->
-    <!-- FONT AWESOME -->
-    <!-- ======================================== -->
 
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-
-    <!-- ======================================== -->
-    <!-- CSS FILES -->
-    <!-- ======================================== -->
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -56,31 +35,20 @@
 <body>
 
 
-    <!-- ======================================== -->
-    <!-- BACKGROUND EFFECTS -->
-    <!-- ======================================== -->
-
     <div class="bg-grid"></div>
 
     <div class="bg-glow glow-1"></div>
     <div class="bg-glow glow-2"></div>
 
-
-    <!-- ======================================== -->
-    <!-- NAVBAR -->
-    <!-- ======================================== -->
-
     <header class="navbar">
 
         <div class="container nav-container">
 
-            <!-- BRAND -->
             <a href="#home" class="brand">
                 ScamAlert
             </a>
 
 
-            <!-- NAVIGATION -->
             <nav class="nav-menu">
 
                 <a href="#home" class="nav-link active">
@@ -96,7 +64,6 @@
                 </a>
 
 
-                <!-- SOCIAL ICONS -->
                 <div class="nav-socials">
 
                     <a href="#" class="social-link">
@@ -116,7 +83,6 @@
             </nav>
 
 
-            <!-- HAMBURGER -->
             <button class="hamburger">
 
                 <span></span>
@@ -128,11 +94,6 @@
         </div>
 
     </header>
-
-
-    <!-- ======================================== -->
-    <!-- HERO SECTION -->
-    <!-- ======================================== -->
 
     <section class="hero" id="home">
 
@@ -176,10 +137,6 @@
     </section>
 
 
-    <!-- ======================================== -->
-    <!-- SMART ANALYZER -->
-    <!-- ======================================== -->
-
     <section class="analyzer" id="analyzer">
 
         <div class="container">
@@ -211,7 +168,6 @@
             </div>
 
 
-            <!-- RESULT -->
             <div class="result-card">
 
                 <div class="result-top">
@@ -249,10 +205,6 @@
 
     </section>
 
-
-    <!-- ======================================== -->
-    <!-- FEATURES -->
-    <!-- ======================================== -->
 
     <section class="features" id="features">
 
@@ -330,10 +282,6 @@
     </section>
 
 
-    <!-- ======================================== -->
-    <!-- CONTACT -->
-    <!-- ======================================== -->
-
     <section class="contact" id="contact">
 
         <div class="container">
@@ -369,10 +317,6 @@
 
     </section>
 
-
-    <!-- ======================================== -->
-    <!-- FOOTER -->
-    <!-- ======================================== -->
 
     <footer class="footer" id="portfolio">
 
@@ -415,11 +359,6 @@
         </div>
 
     </footer>
-
-
-    <!-- ======================================== -->
-    <!-- JS FILES -->
-    <!-- ======================================== -->
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/responsive.js"></script>

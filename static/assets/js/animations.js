@@ -1,21 +1,8 @@
 
-/* ======================================================
-   SCAMALERT ANIMATIONS JAVASCRIPT
-====================================================== */
-
-
-/* ======================================================
-   REVEAL ELEMENTS
-====================================================== */
-
 const revealElements = document.querySelectorAll(
     '.hero-content, .analyzer-card, .result-card, .feature-card, .contact-form, .section-header'
 );
 
-
-/* ======================================================
-   SCROLL REVEAL FUNCTION
-====================================================== */
 
 function revealOnScroll() {
 
@@ -39,24 +26,11 @@ function revealOnScroll() {
 
 }
 
-
-/* ======================================================
-   INITIAL REVEAL
-====================================================== */
-
 revealOnScroll();
 
 
-/* ======================================================
-   SCROLL EVENT
-====================================================== */
-
 window.addEventListener('scroll', revealOnScroll);
 
-
-/* ======================================================
-   FEATURE CARD TILT EFFECT
-====================================================== */
 
 const featureCards = document.querySelectorAll('.feature-card');
 
@@ -99,13 +73,6 @@ featureCards.forEach(card => {
     });
 
 });
-
-
-
-
-/* ======================================================
-   NAVBAR SHADOW ON SCROLL
-====================================================== */
 
 const navbar = document.querySelector('.navbar');
 
